@@ -22,11 +22,17 @@ terraform plan
 ```bash
 terraform apply
 ```
+```bash
+terraform apply -auto-approve
+```
 
 - **destroy**: O comando destroy remove todos os recursos configurados pelo Terraform.
 
 ```bash
 terraform destroy
+```
+```bash
+terraform destroy -auto-approve
 ```
 
 
