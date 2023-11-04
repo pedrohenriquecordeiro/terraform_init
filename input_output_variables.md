@@ -72,3 +72,69 @@ Você pode usar as input variables para tornar suas configurações do Terraform
 
 ### Output Variables
 
+
+No Terraform, as output variables são variáveis que são definidas pelos recursos e módulos do Terraform. 
+As output variables são usadas para retornar informações sobre os recursos e módulos.
+
+#### Exemplo
+
+Vamos imaginar que você deseja criar uma configuração do Terraform para criar uma instância EC2 e um volume EBS. 
+Você pode usar uma output variable para retornar o ID da instância EC2.
+
+Aqui está um exemplo de como usar uma output variable para retornar o ID da instância EC2:
+
+```terraform
+resource "aws_instance" "example" {
+  ami = "ami-0123456789abcdef0"
+  instance_type = "t2.micro"
+}
+
+output "instance_id" {
+  value = aws_instance.example.id
+}
+```
+
+Este código cria um recurso aws_instance chamado example. O recurso aws_instance é usado para criar uma instância EC2.
+
+O código também define uma output variable chamada instance_id. A variável instance_id é usada para retornar o ID da instância EC2.
+
+Você pode usar a variável instance_id em outra parte da sua configuração do Terraform ou em outras ferramentas. Por exemplo, você pode usar a variável instance_id para criar um registro DNS para a instância EC2.
+
+
+### Local Variables
+
+No Terraform, as local variables são variáveis que são definidas dentro de um bloco de código. 
+As local variables são usadas para armazenar informações que são usadas apenas dentro do bloco de código.
+
+#### Exemplo
+
+Vamos imaginar que você deseja criar uma configuração do Terraform para criar uma instância EC2 e um volume EBS. 
+Você pode usar uma local variable para armazenar o tamanho do volume EBS.
+
+Aqui está um exemplo de como usar uma local variable para armazenar o tamanho do volume EBS:
+
+```terraform
+resource "aws_instance" "example" {
+  ami = "ami-0123456789abcdef0"
+  instance_type = "t2.micro"
+}
+
+locals {
+  volume_size = 100
+}
+
+resource "aws_ebs_volume" "example" {
+  size = local.volume_size
+}
+```
+
+Este código cria um recurso aws_instance chamado example. 
+O recurso aws_instance é usado para criar uma instância EC2.
+
+O código também define uma local variable chamada volume_size. 
+A variável volume_size é usada para armazenar o tamanho do volume EBS.
+
+O código também cria um recurso aws_ebs_volume chamado example. 
+O recurso aws_ebs_volume é usado para criar um volume EBS com o tamanho definido pela variável volume_size.
+
+
