@@ -34,5 +34,5 @@ Aqui estão alguns benefícios do uso do Remote Backend do Terraform:
 
 - Facilita o trabalho em equipe: Todos os membros da equipe podem ter acesso ao mesmo estado.
 - Permite a escalabilidade: Você pode usar um Remote Backend para armazenar o estado de um grande número de projetos.
-- Melhora a segurança: O estado do Terraform pode ser criptografado para aumentar a segurança.
+- Melhora a segurança: O estado do Terraform pode ser criptografado para aumentar a segurança (esconde as secrets) e impede a concorrência de escrita ( locking ).
 
