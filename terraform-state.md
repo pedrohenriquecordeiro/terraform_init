@@ -16,6 +16,7 @@ O Remote Backend do Terraform também pode ser útil para escalar suas operaçõ
 Para usar o Remote Backend do Terraform, você precisa configurar um backend no arquivo de configuração do Terraform. O arquivo de configuração do Terraform é um arquivo YAML que contém informações sobre sua configuração do Terraform.
 
 Aqui está um exemplo de como configurar um Remote Backend do Terraform para o S3 da Amazon:
+
 '''terraform
 terraform {
   backend "s3" {
