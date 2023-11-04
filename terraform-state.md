@@ -17,7 +17,7 @@ Para usar o Remote Backend do Terraform, você precisa configurar um backend no 
 
 Aqui está um exemplo de como configurar um Remote Backend do Terraform para o S3 da Amazon:
 
-'''terraform
+```terraform
 terraform {
   backend "s3" {
     region = "us-east-1"
@@ -25,7 +25,7 @@ terraform {
     key = "terraform.tfstate"
   }
 }
-'''
+```
 Este código configura um backend chamado "s3" para o S3 da Amazon. O backend está configurado para usar a região "us-east-1" e o bucket "my-terraform-state". O key é o nome do arquivo de estado que será armazenado no S3.
 
 Depois de configurar o backend, você pode usar o comando terraform init para inicializar o backend.
