@@ -7,11 +7,12 @@ Para importar um módulo do GitHub, por exemplo, você precisa primeiro especifi
 Você pode fazer isso usando o bloco module no arquivo de configuração do Terraform.
 
 Aqui está um exemplo de como importar um módulo do GitHub:
+
 ```terraform
 module "my_module" {
   source = "git::https://github.com/hashicorp/terraform-aws-example"
 }
-```terraform
+```
 
 Este código importa o módulo terraform-aws-example do GitHub. O módulo terraform-aws-example fornece recursos para criar uma instância EC2 e um banco de dados RDS.
 
